@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="bg-auto lg:bg-cover bg-no-repeat">
+    <div class="container mx-auto">
+        <div class="w-4/5 lg:w-3/5 xl:w-2/5 mt-16 mx-auto backdrop-blur shadow-[1px_-1px_1px_1px_rgba(165,165,165,0.4)_inset] rounded-lg">
+            <div class="w-full py-6 bg-transparent shadow-[-1px_1px_1px_1px_rgba(255,255,255,0.4)_inset] rounded-lg">
+                <h1 id="clock" onload="showTime()" class="text-center text-white text-[56px] md:text-[96px] font-semibold"></h1>
+                <h2 id="date" class="text-center text-white text-[20px] md:text-[28px] md:-mt-2"></h2>
+                
+            </div>
+        </div>
+        
+        <div class="w-4/5 lg:w-3/5 xl:w-2/5 mt-8 mb-24 mx-auto backdrop-blur shadow-[1px_-1px_1px_1px_rgba(165,165,165,0.4)_inset] rounded-lg">
+            <div class="w-full pt-10 pb-4 px-10 bg-transparent shadow-[-1px_1px_1px_1px_rgba(255,255,255,0.4)_inset] rounded-lg">
+                
+                <div id="location" class="flex flex-col justify-center items-center">
+                    <h2 class="text-center text-white text-[20px] md:text-[24px] mb-8">Website ini membutuhkan akses lokasi untuk mendapatkan waktu sholat yang akurat.</h2>
+                    <button onclick="getLocation()" class="mb-8 px-3 md:px-5 py-2 md:py-3 text-white bg-blue-600 rounded-lg">Akses Lokasi</button>
+                    <p id="loc"></p>
+                </div>
+                
+                <div id="jadwal" class="hidden">
+                    <h3 class="w-full lg:w-3/4 mx-auto text-center text-white text-[24px] lg:text-[28px] font-semibold">Jadwal sholat di lokasi anda</h2>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script/index.js"></script>
+</body>
+</html>
